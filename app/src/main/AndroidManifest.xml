@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.MillionCoins">
+    package="com.example.m3">
 
     <application
-        android:name="com.example.MillionCoins.UniteApp"
+        android:name="com.example.m3.UniteApp"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.example.MillionCoins.MonthChartActivity"></activity>
-        <activity android:name="com.example.MillionCoins.SettingActivity" />
-        <activity android:name="com.example.MillionCoins.HistoryActivity" />
-        <activity android:name="com.example.MillionCoins.AboutActivity" />
-        <activity android:name="com.example.MillionCoins.SearchActivity" />
-        <activity android:name="com.example.MillionCoins.RecordActivity" />
-        <activity android:name="com.example.MillionCoins.MainActivity">
+        <activity android:name="com.example.m3.MonthChartActivity"></activity>
+        <activity android:name="com.example.m3.SettingActivity" />
+        <activity android:name="com.example.m3.HistoryActivity" />
+        <activity android:name="com.example.m3.AboutActivity" />
+        <activity android:name="com.example.m3.SearchActivity" />
+        <activity android:name="com.example.m3.RecordActivity" />
+        <activity android:name="com.example.m3.MainActivityView">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
