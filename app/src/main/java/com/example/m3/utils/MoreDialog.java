@@ -13,7 +13,6 @@ import android.widget.ImageView;
 import androidx.annotation.NonNull;
 import com.example.m3.AboutActivity;
 import com.example.m3.HistoryActivity;
-import com.example.m3.MonthChartActivity;
 import com.example.m3.R;
 import com.example.m3.SettingActivity;
 
@@ -57,7 +56,7 @@ public class MoreDialog extends Dialog implements View.OnClickListener {
                 getContext().startActivity(intent);
                 break;
             case R.id.dialog_more_btn_info:
-                intent.setClass(getContext(), MonthChartActivity.class);
+//                intent.setClass(getContext(), MonthChartActivity.class);
                 getContext().startActivity(intent);
                 break;
             case R.id.dialog_more_iv:

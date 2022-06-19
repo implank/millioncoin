@@ -1,4 +1,4 @@
-package com.example.m3;
+package com.example.m3.fragment;
 
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -14,6 +14,7 @@ import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
 
+import com.example.m3.R;
 import com.example.m3.adapter.AccountAdapter;
 import com.example.m3.db.AccountBean;
 

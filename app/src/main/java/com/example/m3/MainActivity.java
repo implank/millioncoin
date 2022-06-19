@@ -5,8 +5,11 @@ import android.view.View;
 import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
+
+import com.example.m3.fragment.AboutFrag;
+import com.example.m3.fragment.ChartFrag;
+import com.example.m3.fragment.HomeFrag;
 
 public class MainActivity extends AppCompatActivity {
 	Button b1,b2,b3,b4;
@@ -34,6 +37,16 @@ public class MainActivity extends AppCompatActivity {
 				FragmentManager fm=getSupportFragmentManager();
 				fm.beginTransaction()
 					.replace(R.id.fragmentContainerView,new ChartFrag())
+						.setReorderingAllowed(true)
+						.commit();
+			}
+		});
+		b4.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				FragmentManager fm=getSupportFragmentManager();
+				fm.beginTransaction()
+					.replace(R.id.fragmentContainerView,new AboutFrag())
 						.setReorderingAllowed(true)
 						.commit();
 			}

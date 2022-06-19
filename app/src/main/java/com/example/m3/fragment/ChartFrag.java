@@ -1,4 +1,4 @@
-package com.example.m3;
+package com.example.m3.fragment;
 
 import android.graphics.Color;
 import android.os.Bundle;
@@ -13,6 +13,7 @@ import android.widget.TextView;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.ViewPager;
 
+import com.example.m3.R;
 import com.example.m3.adapter.ChartVPAdapter;
 import com.example.m3.db.DBManager;
 import com.example.m3.frag_chart.IncomChartFragment;
@@ -40,7 +41,7 @@ public class ChartFrag extends Fragment {
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 	                         Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		View view = inflater.inflate(R.layout.activity_month_chart, container, false);
+		View view = inflater.inflate(R.layout.frag_chart, container, false);
 		inBtn = view.findViewById(R.id.chart_btn_in);
 		outBtn = view.findViewById(R.id.chart_btn_out);
 		dateTv = view.findViewById(R.id.chart_tv_date);

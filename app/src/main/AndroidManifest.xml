@@ -10,7 +10,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.example.m3.MonthChartActivity"></activity>
         <activity android:name="com.example.m3.SettingActivity" />
         <activity android:name="com.example.m3.HistoryActivity" />
         <activity android:name="com.example.m3.AboutActivity" />
