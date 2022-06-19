@@ -1,7 +1,6 @@
 package com.example.m3.fragment;
 
 import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 import android.content.DialogInterface;
@@ -10,17 +9,15 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.m3.AboutActivity;
 import com.example.m3.R;
-import com.example.m3.RecordActivity;
-import com.example.m3.SettingActivity;
 import com.example.m3.db.DBManager;
 
 public class AboutFrag extends Fragment {
-	TextView aboutTv,setting_tv_clear;
+	ImageView aboutTv,setting_tv_clear;
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 	                         Bundle savedInstanceState) {

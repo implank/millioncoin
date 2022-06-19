@@ -7,32 +7,49 @@
     android:layout_height="match_parent"
     android:background="@color/grey_f3f3f3">
 
-    <TextView
+    <ImageView
         android:id="@+id/setting_tv_clear"
-        android:layout_width="232dp"
-        android:layout_height="58dp"
-        android:layout_marginTop="124dp"
-        android:background="@color/white"
-        android:padding="15dp"
-        android:text="@string/clear_all"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.318"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/guideline2"
+        app:srcCompat="@mipmap/abouthis" />
 
-    <TextView
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.25" />
+
+    <ImageView
         android:id="@+id/about_tv"
-        android:layout_width="381dp"
-        android:layout_height="56dp"
-        android:background="@color/white"
-        android:padding="15dp"
-        android:text="about us"
-        android:textSize="16sp"
-        android:textStyle="bold"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="@+id/guideline2"
+        app:srcCompat="@mipmap/about2" />
+
+    <ImageView
+        android:id="@+id/about_pic"
+        android:layout_width="208dp"
+        android:layout_height="291dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/setting_tv_clear" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.73"
+        app:srcCompat="@mipmap/aboutpic" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
