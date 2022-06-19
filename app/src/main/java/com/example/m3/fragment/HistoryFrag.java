@@ -2,6 +2,7 @@ package com.example.m3.fragment;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,6 +17,8 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.example.m3.R;
+import com.example.m3.RecordActivity;
+import com.example.m3.SearchActivity;
 import com.example.m3.adapter.AccountAdapter;
 import com.example.m3.db.AccountBean;
 import com.example.m3.db.DBManager;
@@ -29,6 +32,7 @@ public class HistoryFrag extends Fragment {
 	ListView historyLv;
 	TextView timeTv;
 	ImageView calendarIv;
+	ImageView searchIv;
 	List<AccountBean> mDatas;
 	AccountAdapter adapter;
 	int year,month;
@@ -43,6 +47,7 @@ public class HistoryFrag extends Fragment {
 		historyLv = view.findViewById(R.id.history_lv);
 		timeTv = view.findViewById(R.id.history_tv_time);
 		calendarIv = view.findViewById(R.id.history_iv_rili);
+		searchIv = view.findViewById(R.id.history_iv_search);
 		calendarIv.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
@@ -60,7 +65,14 @@ public class HistoryFrag extends Fragment {
 				});
 			}
 		});
-		
+		searchIv.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				Intent intent = new Intent();
+				intent.setClass(getContext(), SearchActivity.class);
+				startActivity(intent);
+			}
+		});
 		mDatas = new ArrayList<>();
 		// 设置适配器
 		adapter = new AccountAdapter(getContext(),mDatas);
