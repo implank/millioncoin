@@ -123,7 +123,6 @@ public class ChartFrag extends Fragment {
 	
 	/* 显示日历对话框*/
 	private void showCalendarDialog() {
-		Log.d("ChartFrag", "showCalendarDialog: ");
 		CalendarDialog dialog = new CalendarDialog(getContext(), selectPos, selectMonth);
 		dialog.show();
 		dialog.setDialogSize();

@@ -7,13 +7,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="50dp">
-        <ImageView
-            android:id="@+id/about_iv_back"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:src="@mipmap/it_back"
-            android:onClick="onClick"
-            android:layout_marginLeft="10dp"/>
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

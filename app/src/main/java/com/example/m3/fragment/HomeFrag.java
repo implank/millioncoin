@@ -42,8 +42,6 @@ public class HomeFrag extends Fragment {
 		View view =  inflater.inflate(R.layout.frag_main, container, false);
 		initTime();
 		todayLv = view.findViewById(R.id.main_lv);
-		editBtn = view.findViewById(R.id.main_btn_edit);
-		moreBtn = view.findViewById(R.id.main_btn_more);
 		searchIv = view.findViewById(R.id.main_iv_search);
 		setLVLongClickListener();
 //        preferences = getSharedPreferences("budget", Context.MODE_PRIVATE);
