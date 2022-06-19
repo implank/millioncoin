@@ -69,12 +69,12 @@ abstract public class BaseChartFragment extends Fragment {
 //        设置坐标轴显示的数据
         setAxisData(year,month);
     }
-/** 设置坐标轴显示的数据*/
+    /** 设置坐标轴显示的数据*/
     protected abstract void setAxisData(int year, int month);
 
     /** 设置柱状图坐标轴的显示  方法必须重新*/
     protected  void setAxis(int year, final int month){
-//        设置X轴
+//      设置X轴
         XAxis xAxis = barChart.getXAxis();
         xAxis.setPosition(XAxis.XAxisPosition.BOTTOM); //设置x轴显示在下方
         xAxis.setDrawGridLines(true);  //设置绘制该轴的网格线

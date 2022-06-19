@@ -11,7 +11,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name="com.example.m3.SettingActivity" />
-        <activity android:name="com.example.m3.HistoryActivity" />
         <activity android:name="com.example.m3.AboutActivity" />
         <activity android:name="com.example.m3.SearchActivity" />
         <activity android:name="com.example.m3.RecordActivity" />

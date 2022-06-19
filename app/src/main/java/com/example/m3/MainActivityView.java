@@ -2,32 +2,6 @@ package com.example.m3;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.AlertDialog;
-import android.content.Context;
-import android.content.DialogInterface;
-import android.content.Intent;
-import android.content.SharedPreferences;
-import android.os.Bundle;
-import android.text.method.HideReturnsTransformationMethod;
-import android.text.method.PasswordTransformationMethod;
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.Button;
-import android.widget.ImageButton;
-import android.widget.ImageView;
-import android.widget.ListView;
-import android.widget.TextView;
-
-import com.example.m3.adapter.AccountAdapter;
-import com.example.m3.db.AccountBean;
-import com.example.m3.db.DBManager;
-import com.example.m3.utils.BudgetDialog;
-import com.example.m3.utils.MoreDialog;
-
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.List;
-
 public class MainActivityView extends AppCompatActivity {
 //    ListView todayLv;  //展示今日收支情况的ListView
 //    ImageView searchIv;

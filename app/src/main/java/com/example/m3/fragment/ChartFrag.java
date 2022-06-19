@@ -74,6 +74,8 @@ public class ChartFrag extends Fragment {
 		setVPSelectListener();
 		return view;
 	}
+	
+	
 	private void setVPSelectListener() {
 		chartVp.addOnPageChangeListener(new ViewPager.SimpleOnPageChangeListener(){
 			@Override

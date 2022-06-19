@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
@@ -15,7 +16,7 @@ import com.example.m3.fragment.HistoryFrag;
 import com.example.m3.fragment.HomeFrag;
 
 public class MainActivity extends AppCompatActivity {
-	Button b1,b2,b3,b4,b5;
+	ImageView b1,b2,b3,b4,b5;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -68,7 +69,6 @@ public class MainActivity extends AppCompatActivity {
 		b5.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				Log.d("MainActivity","onClick");
 				Intent intent = new Intent();
 				intent.setClass(getApplicationContext(), RecordActivity.class);
 				startActivity(intent);

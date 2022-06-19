@@ -17,6 +17,7 @@ import androidx.fragment.app.Fragment;
 import com.example.m3.R;
 import com.example.m3.adapter.AccountAdapter;
 import com.example.m3.db.AccountBean;
+import com.example.m3.db.DBManager;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -51,8 +52,18 @@ public class HomeFrag extends Fragment {
 		//设置适配器：加载每一行数据到列表当中
 		adapter = new AccountAdapter(getContext(), mDatas);
 		todayLv.setAdapter(adapter);
+		setTopTvShow();
+		loadDBData();
 		return view;
 	}
+	
+	@Override
+	public void onResume() {
+		super.onResume();
+		setTopTvShow();
+		loadDBData();
+	}
+	
 	void initTime() {
 		Calendar c = Calendar.getInstance();
 		year = c.get(Calendar.YEAR);
@@ -84,6 +95,32 @@ public class HomeFrag extends Fragment {
 		topbudgetTv = headerView.findViewById(R.id.item_mainlv_top_tv_budget);
 		topConTv = headerView.findViewById(R.id.item_mainlv_top_tv_day);
 		topShowIv = headerView.findViewById(R.id.item_mainlv_top_iv_hide);
-		
 	}
+	private void setTopTvShow() {
+        //获取今日支出和收入总金额，显示在view当中
+        float incomeOneDay = DBManager.getSumMoneyOneDay(year, month, day, 1);
+        float outcomeOneDay = DBManager.getSumMoneyOneDay(year, month, day, 0);
+        String infoOneDay = "今日支出 ￥"+outcomeOneDay+"  收入 ￥"+incomeOneDay;
+        topConTv.setText(infoOneDay);
+//        获取本月收入和支出总金额
+        float incomeOneMonth = DBManager.getSumMoneyOneMonth(year, month, 1);
+        float outcomeOneMonth = DBManager.getSumMoneyOneMonth(year, month, 0);
+        topInTv.setText("￥"+incomeOneMonth);
+        topOutTv.setText("￥"+outcomeOneMonth);
+
+//    设置显示运算剩余
+//        float bmoney = preferences.getFloat("bmoney", 0);//预算
+//        if (bmoney == 0) {
+//            topbudgetTv.setText("￥ 0");
+//        }else{
+//            float syMoney = bmoney-outcomeOneMonth;
+//            topbudgetTv.setText("￥"+syMoney);
+//        }
+    }
+	private void loadDBData() {
+    List<AccountBean> list = DBManager.getAccountListOneDayFromAccounttb(year, month, day);
+    mDatas.clear();
+    mDatas.addAll(list);
+    adapter.notifyDataSetChanged();
+  }
 }
