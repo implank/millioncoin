@@ -1,37 +1,41 @@
 package com.example.m3;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.viewpager2.widget.ViewPager2;
-
-import com.example.m3.adapter.VPAdapter;
-import com.google.android.material.tabs.TabLayout;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 
 public class MainActivity extends AppCompatActivity {
-	private TabLayout tabLayout;
-	private ViewPager2 viewPager;
+	Button b1,b2,b3,b4;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		tabLayout = findViewById(R.id.tabLayout);
-		viewPager = findViewById(R.id.viewPager2);
-		VPAdapter vpAdapter=new VPAdapter(getSupportFragmentManager(),getLifecycle());
-//		vpAdapter.addFragment(new MainView(), "Fragment1");
-//		vpAdapter.addFragment(new MainView(), "Fragment2");
-//		vpAdapter.addFragment(new MainView(), "Fragment3");
-		viewPager.setAdapter(vpAdapter);
-		tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+		b1=findViewById(R.id.b1);
+		b2=findViewById(R.id.b2);
+		b3=findViewById(R.id.b3);
+		b4=findViewById(R.id.b4);
+		b1.setOnClickListener(new View.OnClickListener() {
 			@Override
-			public void onTabSelected(TabLayout.Tab tab) {
-				viewPager.setCurrentItem(tab.getPosition());
+			public void onClick(View v) {
+				FragmentManager fm=getSupportFragmentManager();
+				fm.beginTransaction()
+					.replace(R.id.fragmentContainerView,new HomeFrag())
+						.setReorderingAllowed(true)
+						.commit();
 			}
+		});
+		b2.setOnClickListener(new View.OnClickListener() {
 			@Override
-			public void onTabUnselected(TabLayout.Tab tab) {
-			}
-			@Override
-			public void onTabReselected(TabLayout.Tab tab) {
+			public void onClick(View v) {
+				FragmentManager fm=getSupportFragmentManager();
+				fm.beginTransaction()
+					.replace(R.id.fragmentContainerView,new ChartFrag())
+						.setReorderingAllowed(true)
+						.commit();
 			}
 		});
 	}

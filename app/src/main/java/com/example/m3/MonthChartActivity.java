@@ -24,9 +24,10 @@ public class MonthChartActivity extends AppCompatActivity {
     Button inBtn,outBtn;
     TextView dateTv,inTv,outTv;
     ViewPager chartVp;
-     int year;
-     int month;
+    int year;
+    int month;
     int selectPos = -1,selectMonth =-1;
+    
     List<Fragment>chartFragList;
     private IncomChartFragment incomChartFragment;
     private OutcomChartFragment outcomChartFragment;
@@ -103,9 +104,6 @@ public class MonthChartActivity extends AppCompatActivity {
 
     public void onClick(View view) {
         switch (view.getId()) {
-            case R.id.chart_iv_back:
-                finish();
-                break;
             case R.id.chart_iv_rili:
                 showCalendarDialog();
                 break;

@@ -21,7 +21,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
-public class MainView extends Fragment {
+public class HomeFrag extends Fragment {
 	ListView todayLv;  //展示今日收支情况的ListView
 	ImageView searchIv;
 	Button editBtn;
@@ -38,7 +38,7 @@ public class MainView extends Fragment {
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 	                         Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		View view =  inflater.inflate(R.layout.fragment_incom_chart, container, false);
+		View view =  inflater.inflate(R.layout.frag_main, container, false);
 		initTime();
 		todayLv = view.findViewById(R.id.main_lv);
 		editBtn = view.findViewById(R.id.main_btn_edit);
