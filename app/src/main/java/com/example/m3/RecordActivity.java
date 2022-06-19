@@ -22,7 +22,6 @@ public class RecordActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Log.d("RecordActivity","onCreate");
         setContentView(R.layout.activity_record);
         //1.查找控件
         tabLayout = findViewById(R.id.record_tabs);

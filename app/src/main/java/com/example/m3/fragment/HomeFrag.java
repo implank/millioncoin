@@ -24,18 +24,13 @@ import java.util.Calendar;
 import java.util.List;
 
 public class HomeFrag extends Fragment {
-	ListView todayLv;  //展示今日收支情况的ListView
-	ImageView searchIv;
-	Button editBtn;
-	ImageButton moreBtn;
-	//声明数据源
+	ListView todayLv;
 	List<AccountBean> mDatas;
 	AccountAdapter adapter;
 	int year, month, day;
 	//头布局相关控件
 	View headerView;
 	TextView topOutTv, topInTv, topbudgetTv, topConTv;
-	ImageView topShowIv;
 	SharedPreferences preferences;
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 	                         Bundle savedInstanceState) {
@@ -43,7 +38,6 @@ public class HomeFrag extends Fragment {
 		View view =  inflater.inflate(R.layout.frag_main, container, false);
 		initTime();
 		todayLv = view.findViewById(R.id.main_lv);
-		searchIv = view.findViewById(R.id.main_iv_search);
 		setLVLongClickListener();
 //        preferences = getSharedPreferences("budget", Context.MODE_PRIVATE);
 		//添加ListView的头布局
@@ -94,7 +88,6 @@ public class HomeFrag extends Fragment {
 		topInTv = headerView.findViewById(R.id.item_mainlv_top_tv_in);
 		topbudgetTv = headerView.findViewById(R.id.item_mainlv_top_tv_budget);
 		topConTv = headerView.findViewById(R.id.item_mainlv_top_tv_day);
-		topShowIv = headerView.findViewById(R.id.item_mainlv_top_iv_hide);
 	}
 	private void setTopTvShow() {
         //获取今日支出和收入总金额，显示在view当中

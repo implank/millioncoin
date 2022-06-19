@@ -22,13 +22,7 @@
             android:textStyle="bold"
             android:textSize="18sp"
             android:textColor="@color/black"/>
-        <ImageView
-            android:id="@+id/main_iv_search"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:src="@mipmap/search"
-            android:layout_alignParentRight="true"
-            android:padding="10dp"/>
+
     </RelativeLayout>
 
     <ListView

@@ -8,6 +8,22 @@
         android:layout_width="match_parent"
         android:layout_height="50dp">
 
+        <ImageView
+            android:id="@+id/main_iv_search"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="88dp"
+            android:layout_marginRight="362dp"
+            android:layout_marginBottom="1dp"
+            android:padding="10dp"
+            android:src="@mipmap/search" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
